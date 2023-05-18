@@ -23,7 +23,7 @@ int	_putchar(char c);
 void print_number(int n);
 int	_print_str(char *str);
 void	welcomeScreen();
-int changeDirectory(char* args[]);
+int changeDirectory(char* arg);
 unsigned int _strlen(const char *s);
 char *_strcpy(char *dest, char *src);
 char *concat(const char *str1, const char *str2);

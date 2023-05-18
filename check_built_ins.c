@@ -21,6 +21,11 @@ int check_built_ins(char *buffer, char *token)
 		print_env();
 		return (1);
 	}
+	else if ((_strcmp("cd", token)) == 0)
+	{
+		changeDirectory(buffer);
+		return (1);
+	}
 	return (0);
 }
 

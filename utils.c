@@ -16,18 +16,18 @@ void	welcomeScreen()
 /**
  * changeDirectory - Method to change directory
  */
-int changeDirectory(char* args[])
+int changeDirectory(char* arg)
 {
-	if (args[1] == NULL) /** If we write no path (only 'cd'), then go to the home directory */
+	if (arg == NULL) /** If we write no path (only 'cd'), then go to the home directory */
 	{
 		chdir(getenv("HOME")); 
 		return 1;
 	}
 	else /** Else we change the directory to the one specified by the argument, if possible */
 	{
-		if (chdir(args[1]) == -1) 
+		if (chdir(arg) == -1) 
 		{
-			printf(" %s: no such directory\n", args[1]);
+			printf(" %s: no such directory\n", arg);
             return -1;
 		}
 	}

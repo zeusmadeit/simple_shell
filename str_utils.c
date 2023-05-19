@@ -3,8 +3,10 @@
 /**
 * _putchar - prints character to stdout
 * @c: char
+* 
 * Return: length of characters printed
 */
+
 int	_putchar(char c)
 {
 	write(1, &c, 1);
@@ -14,8 +16,10 @@ int	_putchar(char c)
 /**
 * _print_str - prints @str to stdout
 * @str: string
+* 
 * Return: length of @str printed
 */
+
 int	_print_str(char *str)
 {
 	int i = 0;

@@ -7,8 +7,7 @@
  * @new_size: is the new size, in bytes of the new memory block
  *
  * Return: pointer to new memory allocated
- */
-
+*/
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *nptr = NULL;

@@ -7,8 +7,7 @@
  * @count: a counting of errors so far.
  *
  * Return: void.
- */
-
+*/
 void child_exe(char **cmnds, char *argv, int count)
 {
 	if (execve(cmnds[0], cmnds, environ) == -1)
@@ -27,9 +26,9 @@ void child_exe(char **cmnds, char *argv, int count)
  * input_tokens - finds and allocates tokens in a buffer.
  * @token: first token to be allocated.
  * @buffer: buffer to continue the tokenize.
+ * 
  * Return: address of allocated pointers, NULL if fails.
- */
-
+*/
 char **input_tokens(char *token, char *buffer)
 {
 	char **cmnds = NULL;

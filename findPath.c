@@ -4,6 +4,7 @@
  * find_inPath - looks in paths for a function to be valid.
  * @token: token to be looked in the PATH directories.
  *
+ *
  * Return: if token is found in PATH return a newly allocated
  *         string with PATH_found/token. NULL if not found.
  */
@@ -52,7 +53,7 @@ char *find_inPath(char **token)
  * store_paths - looks for PATH in env and returns a newly allocated
  *               array of strings with all the directories in PATH.
  * Return: newly allocated array of strings with all the directories in PATH.
- */
+*/
 
 char **store_paths(void)
 {

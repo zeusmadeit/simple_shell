@@ -61,7 +61,6 @@ int non_inter_piped(char *argv)
 			else
 			{
 				waitpid(child_pid, &status, 0);
-				/*error = errno;*/
 				error = WEXITSTATUS(status);
 			}
 			free_all(buffer, cmnds, heap_token);
@@ -73,3 +72,4 @@ int non_inter_piped(char *argv)
 		free(buffer);
 	return (error);
 }
+

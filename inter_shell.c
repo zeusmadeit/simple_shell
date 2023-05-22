@@ -2,7 +2,6 @@
 
 /**
 * inter_shell - intercactve shell
-*
 * Return: 0 on success.
 */
 
@@ -14,7 +13,7 @@ int inter_shell(void)
 	int error = 0, count = 1;
 
 	welcomeScreen();
-	write(STDOUT_FILENO, "($) ", 4);
+	_print_str("($) ");
 	while ((line = getline(&buffer, &line_size, stdin)))
 	{
 		if (line == EOF)/*check end of file*/
@@ -25,13 +24,13 @@ int inter_shell(void)
 		}
 		if (*buffer == '\n')
 		{
-			write(STDOUT_FILENO, "($) ", 4);
+			_print_str("($) ");
 			count++;
 			continue;
 		}
 
 		error = process_line(&buffer, &line_size, &count);
-		write(STDOUT_FILENO, "($) ", 4);
+		_print_str("($) ");
 	}
 	return (error);
 }

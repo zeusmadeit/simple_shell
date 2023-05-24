@@ -10,7 +10,7 @@ main.c -
 _realloc.c - 
 utils.c - 
 findPath.c - 
-main.h - 
+main.h - Local header file with all prototypes to use.
 runCmd.c - 
 hsh - 
 _strcmp.c - 
